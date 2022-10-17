@@ -35,7 +35,8 @@ namespace KaracadanWebApp.Controllers
         {
             await _context.Personels.AddAsync(personel);
             await _context.SaveChangesAsync();
-            return View("Index");
+            var allPersonels = await _context.Personels.ToListAsync();
+            return View("Index", allPersonels);
         }
     }
 }
