@@ -78,12 +78,14 @@ namespace KaracadanWebApp.Controllers
                 if (userManager.Users.Any(u => u.Email == userViewModel.Email))
                 {
                     ModelState.AddModelError("", "Bu email adresi kayıtlıdır.");
+                    ViewBag.Message = "Bu email adresi kayıtlıdır.";
                     return View(userViewModel);
                 }
 
                 if (userManager.Users.Any(u => u.PhoneNumber == userViewModel.PhoneNumber))
                 {
                     ModelState.AddModelError("", "Bu telefon numarası kayıtlıdır.");
+                    ViewBag.Message = "Bu telefon numarası kayıtlıdır.";
                     return View(userViewModel);
                 }
 
@@ -102,6 +104,7 @@ namespace KaracadanWebApp.Controllers
                 }
                 else
                 {
+                    ViewBag.Message = "Kayıt Sırasında Hata ile Karşılaşıldı";
                     AddModelError(result);
                 }
             }

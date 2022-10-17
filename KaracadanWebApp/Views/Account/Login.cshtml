@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="~/WebCore/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="~/WebCore/dist/css/adminlte.min.css">
-
+    <!-- Toastr -->
     <link rel="stylesheet" href="~/WebCore/plugins/toastr/toastr.min.css">
 </head>
 <body class="hold-transition login-page">
@@ -35,8 +35,7 @@
                 <div asp-validation-summary="All" class="text-danger"></div>
                 <form asp-action="Login" asp-id="SignIn" id="SignIn">
                     <div class="input-group mb-3">
-                        @*                <input type="email" class="form-control" name="Email" placeholder="Email">
-                        *@                <input asp-for="Email" class="form-control" placeholder="Email" />
+                        <input asp-for="Email" class="form-control" placeholder="Email" />
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -46,8 +45,7 @@
                     </div>
                     <div class="input-group mb-3">
                         <input type="password" asp-for="Password" class="form-control" placeholder="Password" />
-                        @*                <input type="password" class="form-control" name="Password" placeholder="Password">
-                        *@                <div class="input-group-append">
+                        <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
                             </div>
@@ -57,8 +55,7 @@
                     <div class="row">
                         <div class="col-8">
                             <div class="icheck-primary">
-                                @*                        <input type="checkbox" id="remember" name="RememberMe">
-                                *@                        <input type="checkbox" asp-for="RememberMe" class="form-control" />
+                                <input type="checkbox" asp-for="RememberMe" class="form-control" />
                                 <label for="remember">
                                     Remember Me
                                 </label>
