@@ -4,12 +4,14 @@ namespace KaracadanWebApp.Models
 {
     public class UserLoginModel
     {
-        //public string UserName { get; set; }
-
-        public string Password { get; set; }
         public bool RememberMe { get; set; }
 
-        [DataType(DataType.EmailAddress, ErrorMessage = "Please enter a valid email address")]
+        [EmailAddress(ErrorMessage = "Lütfen Geçerli Bir Email Giriniz")]
+        [Required(ErrorMessage = "Email Alanı Zorunludur")]
         public string Email { get; set; }
+
+
+        [Required(ErrorMessage = "Lütfen Şifre Giriniz")]
+        public string Password { get; set; }
     }
 }

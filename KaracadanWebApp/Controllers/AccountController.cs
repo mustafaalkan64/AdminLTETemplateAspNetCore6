@@ -25,20 +25,6 @@ namespace KaracadanWebApp.Controllers
 
                 if (user != null)
                 {
-                    //if (await userManager.IsLockedOutAsync(user))
-                    //{
-                    //    ModelState.AddModelError("", "Hesabınız bir süreliğine kilitlenmiştir. Lütfen daha sonra tekrar deneyiniz.");
-
-                    //    return View(userLoginModel);
-                    //}
-
-                    //if (userManager.IsEmailConfirmedAsync(user).Result == false)
-                    //{
-                    //    ModelState.AddModelError("", "Email adresiniz onaylanmamıştır. Lütfen  epostanızı kontrol ediniz.");
-                    //    return View(userLoginModel);
-                    //}
-
-                    //await signInManager.SignOutAsync();
 
                     Microsoft.AspNetCore.Identity.SignInResult result = await signInManager.PasswordSignInAsync(user, userLoginModel.Password, userLoginModel.RememberMe, false);
 
@@ -47,10 +33,17 @@ namespace KaracadanWebApp.Controllers
 
                         return RedirectToAction("Index", "Home");
                     }
+                    else
+                    {
+                        ModelState.AddModelError("", "Şifreniz Hatalı");
+                        ViewBag.Message = "Şifreniz Hatalı";
+                        return View(userLoginModel);
+                    }
                 }
                 else
                 {
                     ModelState.AddModelError("", "Bu email adresine kayıtlı kullanıcı bulunamamıştır.");
+                    ViewBag.Message = "Bu email adresine kayıtlı kullanıcı bulunamamıştır.";
                 }
             }
 
