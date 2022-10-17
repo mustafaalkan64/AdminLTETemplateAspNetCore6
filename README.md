@@ -7,4 +7,7 @@ Asp.net Core MVC 6 Pages with Admin LTE Template
 - Entity Framework Core Code First 
 - Javascript, Jquery
 
-![alt text](https://imageup.me/images/af64360f-893e-40b6-bc9a-22677ba575db.png)
+![alt text](https://github.com/mustafaalkan64/AdminLTETemplateAspNetCore6/blob/master/KaracadanWebApp/Img/Capture1.PNG)
+![alt text](https://github.com/mustafaalkan64/AdminLTETemplateAspNetCore6/blob/master/KaracadanWebApp/Img/Capture2.PNG)
+![alt text](https://github.com/mustafaalkan64/AdminLTETemplateAspNetCore6/blob/master/KaracadanWebApp/Img/Capture3.PNG)
+![alt text](https://github.com/mustafaalkan64/AdminLTETemplateAspNetCore6/blob/master/KaracadanWebApp/Img/Capture4.PNG)
