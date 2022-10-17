@@ -1,4 +1,4 @@
-# Admin LTE Template With AspNet Core 6
+# Admin LTE Template With AspNet Core 6 MVC
 Asp.net Core MVC 6 Pages with Admin LTE Template
 
 - Admin LTE Template
