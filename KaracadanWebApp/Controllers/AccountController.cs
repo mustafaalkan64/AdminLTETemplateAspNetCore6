@@ -71,32 +71,32 @@ namespace KaracadanWebApp.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> SignUp(UserViewModel userViewModel)
+        public async Task<IActionResult> SignUp(UserRegisterModel userRegisterModel)
         {
             if (ModelState.IsValid)
             {
-                if (userManager.Users.Any(u => u.Email == userViewModel.Email))
+                if (userManager.Users.Any(u => u.Email == userRegisterModel.Email))
                 {
                     ModelState.AddModelError("", "Bu email adresi kayıtlıdır.");
                     ViewBag.Message = "Bu email adresi kayıtlıdır.";
-                    return View(userViewModel);
+                    return View(userRegisterModel);
                 }
 
-                if (userManager.Users.Any(u => u.PhoneNumber == userViewModel.PhoneNumber))
+                if (userManager.Users.Any(u => u.PhoneNumber == userRegisterModel.PhoneNumber))
                 {
                     ModelState.AddModelError("", "Bu telefon numarası kayıtlıdır.");
                     ViewBag.Message = "Bu telefon numarası kayıtlıdır.";
-                    return View(userViewModel);
+                    return View(userRegisterModel);
                 }
 
                 ApplicationUser user = new ApplicationUser();
-                user.UserName = userViewModel.UserName;
-                user.Email = userViewModel.Email;
-                user.PhoneNumber = userViewModel.PhoneNumber;
-                user.FirstName = userViewModel.FirstName;
-                user.LastName = userViewModel.LastName;
+                user.UserName = userRegisterModel.UserName;
+                user.Email = userRegisterModel.Email;
+                user.PhoneNumber = userRegisterModel.PhoneNumber;
+                user.FirstName = userRegisterModel.FirstName;
+                user.LastName = userRegisterModel.LastName;
 
-                IdentityResult result = await userManager.CreateAsync(user, userViewModel.Password);
+                IdentityResult result = await userManager.CreateAsync(user, userRegisterModel.Password);
 
                 if (result.Succeeded)
                 {
@@ -109,7 +109,7 @@ namespace KaracadanWebApp.Controllers
                 }
             }
 
-            return View(userViewModel);
+            return View(userRegisterModel);
         }
 
 

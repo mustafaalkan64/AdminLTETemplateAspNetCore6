@@ -2,7 +2,7 @@
 
 namespace KaracadanWebApp.Models
 {
-    public class UserViewModel
+    public class UserRegisterModel
     {
         [Required(ErrorMessage = "Kullanıcı ismi gereklidir.")]
         [Display(Name = "Kullanıcı Adı")]
