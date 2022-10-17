@@ -1,0 +1,170 @@
+﻿@model KaracadanWebApp.Models.Personels
+
+@{
+    ViewData["Title"] = "Yeni Personel Ekleme";
+    Layout = "_LayoutNew";
+}
+
+
+
+<div class="row">
+    <!-- left column -->
+    <div class="col-md-12">
+        <!-- jquery validation -->
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Personel Formu <small></small></h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <form asp-action="Create" asp-id="quickForm" id="quickForm">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Surname" class="control-label"></label>
+                        <input asp-for="Surname" class="form-control" />
+                        <span asp-validation-for="Surname" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PhoneNumber" class="control-label"></label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CardNumber" class="control-label"></label>
+                        <input asp-for="CardNumber" class="form-control" />
+                        <span asp-validation-for="CardNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="FirmName" class="control-label"></label>
+                        <input asp-for="FirmName" class="form-control" />
+                        <span asp-validation-for="FirmName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SicilNo" class="control-label"></label>
+                        <input asp-for="SicilNo" class="form-control" />
+                        <span asp-validation-for="SicilNo" class="text-danger"></span>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+        <!-- /.card -->
+    </div>
+    <!--/.col (left) -->
+    <!-- right column -->
+    <div class="col-md-6">
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </div>
+    <!--/.col (right) -->
+</div>
+
+<script src="~/WebCore/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="~/WebCore/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- jquery-validation -->
+<script src="~/WebCore/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="~/WebCore/plugins/jquery-validation/additional-methods.min.js"></script>
+<!-- AdminLTE App -->
+<script src="~/WebCore/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="~/WebCore/dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+$(function () {
+  $.validator.setDefaults({
+    submitHandler: function (e) {
+    e.preventDefault();
+    //var jqxhr = $.ajax({
+    //  url: "/Personels/Create",
+    //  type: "POST",
+    //  dataType: "json",
+    //  data: $("#$('#quickForm')").serialize(),
+    //  contentType: "application/json; charset=utf-8",
+    //  success: function (response) {
+    //      alert("sdsdf");
+    //  }
+    //  });
+
+      jqxhr.done(function (data) {
+          alert( "Personel Başarıyla Kaydedildi!" );
+      });     
+
+      jqxhr.fail(function () {
+      });
+    }
+  });
+  //$('#quickForm').validate({
+  //  rules: {
+  //    Email: {
+  //      required: true,
+  //      email: true,
+  //    },
+  //    Name: {
+  //      required: true,
+  //    },
+  //    Surname: {
+  //      required: true,
+  //    },
+  //    Password: {
+  //      required: true,
+  //      minlength: 5
+  //    }
+  //  },
+  //  messages: {
+  //    Email: {
+  //      required: "Please enter a email address",
+  //      email: "Please enter a valid email address"
+  //    },
+  //    Password: {
+  //      required: "Please provide a password",
+  //      minlength: "Your password must be at least 5 characters long"
+  //    },
+  //    Name: {
+  //      required: "Please enter a name",
+  //    },
+  //    Surname: {
+  //      required: "Please enter a surname",
+  //    },
+  //  },
+  //  errorElement: 'span',
+  //  errorPlacement: function (error, element) {
+  //    error.addClass('invalid-feedback');
+  //    element.closest('.form-group').append(error);
+  //  },
+  //  highlight: function (element, errorClass, validClass) {
+  //    $(element).addClass('is-invalid');
+  //  },
+  //  unhighlight: function (element, errorClass, validClass) {
+  //    $(element).removeClass('is-invalid');
+  //  }
+  //});
+});
+</script>
+
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}
+

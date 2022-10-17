@@ -1,0 +1,166 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>8ae92592-da7c-4455-9397-5ffc2481f952</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\WebCore\build\config\postcss.config.js" />
+    <None Include="wwwroot\WebCore\build\config\rollup.config.js" />
+    <None Include="wwwroot\WebCore\build\js\.jscsrc" />
+    <None Include="wwwroot\WebCore\build\js\AdminLTE.js" />
+    <None Include="wwwroot\WebCore\build\js\CardRefresh.js" />
+    <None Include="wwwroot\WebCore\build\js\CardWidget.js" />
+    <None Include="wwwroot\WebCore\build\js\ControlSidebar.js" />
+    <None Include="wwwroot\WebCore\build\js\DirectChat.js" />
+    <None Include="wwwroot\WebCore\build\js\Dropdown.js" />
+    <None Include="wwwroot\WebCore\build\js\Layout.js" />
+    <None Include="wwwroot\WebCore\build\js\PushMenu.js" />
+    <None Include="wwwroot\WebCore\build\js\SiteSearch.js" />
+    <None Include="wwwroot\WebCore\build\js\Toasts.js" />
+    <None Include="wwwroot\WebCore\build\js\TodoList.js" />
+    <None Include="wwwroot\WebCore\build\js\Treeview.js" />
+    <None Include="wwwroot\WebCore\build\npm\DocsPlugins.js" />
+    <None Include="wwwroot\WebCore\build\npm\DocsPublish.js" />
+    <None Include="wwwroot\WebCore\build\npm\Plugins.js" />
+    <None Include="wwwroot\WebCore\build\npm\Publish.js" />
+    <None Include="wwwroot\WebCore\build\scss\.csslintrc" />
+    <None Include="wwwroot\WebCore\build\scss\AdminLTE-components.scss" />
+    <None Include="wwwroot\WebCore\build\scss\AdminLTE-core.scss" />
+    <None Include="wwwroot\WebCore\build\scss\AdminLTE-extra-components.scss" />
+    <None Include="wwwroot\WebCore\build\scss\AdminLTE-pages.scss" />
+    <None Include="wwwroot\WebCore\build\scss\AdminLTE-plugins.scss" />
+    <None Include="wwwroot\WebCore\build\scss\AdminLTE-raw.scss" />
+    <None Include="wwwroot\WebCore\build\scss\AdminLTE.scss" />
+    <None Include="wwwroot\WebCore\build\scss\mixins\_accent.scss" />
+    <None Include="wwwroot\WebCore\build\scss\mixins\_backgrounds.scss" />
+    <None Include="wwwroot\WebCore\build\scss\mixins\_cards.scss" />
+    <None Include="wwwroot\WebCore\build\scss\mixins\_custom-forms.scss" />
+    <None Include="wwwroot\WebCore\build\scss\mixins\_direct-chat.scss" />
+    <None Include="wwwroot\WebCore\build\scss\mixins\_miscellaneous.scss" />
+    <None Include="wwwroot\WebCore\build\scss\mixins\_navbar.scss" />
+    <None Include="wwwroot\WebCore\build\scss\mixins\_sidebar.scss" />
+    <None Include="wwwroot\WebCore\build\scss\mixins\_toasts.scss" />
+    <None Include="wwwroot\WebCore\build\scss\pages\_404_500_errors.scss" />
+    <None Include="wwwroot\WebCore\build\scss\pages\_e-commerce.scss" />
+    <None Include="wwwroot\WebCore\build\scss\pages\_invoice.scss" />
+    <None Include="wwwroot\WebCore\build\scss\pages\_lockscreen.scss" />
+    <None Include="wwwroot\WebCore\build\scss\pages\_login_and_register.scss" />
+    <None Include="wwwroot\WebCore\build\scss\pages\_mailbox.scss" />
+    <None Include="wwwroot\WebCore\build\scss\pages\_profile.scss" />
+    <None Include="wwwroot\WebCore\build\scss\pages\_projects.scss" />
+    <None Include="wwwroot\WebCore\build\scss\parts\_components.scss" />
+    <None Include="wwwroot\WebCore\build\scss\parts\_core.scss" />
+    <None Include="wwwroot\WebCore\build\scss\parts\_extra-components.scss" />
+    <None Include="wwwroot\WebCore\build\scss\parts\_miscellaneous.scss" />
+    <None Include="wwwroot\WebCore\build\scss\parts\_pages.scss" />
+    <None Include="wwwroot\WebCore\build\scss\parts\_plugins.scss" />
+    <None Include="wwwroot\WebCore\build\scss\plugins\_bootstrap-slider.scss" />
+    <None Include="wwwroot\WebCore\build\scss\plugins\_bootstrap-switch.scss" />
+    <None Include="wwwroot\WebCore\build\scss\plugins\_fullcalendar.scss" />
+    <None Include="wwwroot\WebCore\build\scss\plugins\_icheck-bootstrap.scss" />
+    <None Include="wwwroot\WebCore\build\scss\plugins\_jqvmap.scss" />
+    <None Include="wwwroot\WebCore\build\scss\plugins\_mapael.scss" />
+    <None Include="wwwroot\WebCore\build\scss\plugins\_miscellaneous.scss" />
+    <None Include="wwwroot\WebCore\build\scss\plugins\_mixins.scss" />
+    <None Include="wwwroot\WebCore\build\scss\plugins\_pace.scss" />
+    <None Include="wwwroot\WebCore\build\scss\plugins\_select2.scss" />
+    <None Include="wwwroot\WebCore\build\scss\plugins\_sweetalert2.scss" />
+    <None Include="wwwroot\WebCore\build\scss\plugins\_toastr.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_alerts.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_bootstrap-variables.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_brand.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_buttons.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_callout.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_cards.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_carousel.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_colors.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_control-sidebar.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_direct-chat.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_dropdown.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_elevation.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_forms.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_info-box.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_layout.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_main-header.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_main-sidebar.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_miscellaneous.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_mixins.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_modals.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_navs.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_print.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_products.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_progress-bars.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_sidebar-mini.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_small-box.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_social-widgets.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_table.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_text.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_timeline.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_toasts.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_users-list.scss" />
+    <None Include="wwwroot\WebCore\build\scss\_variables.scss" />
+    <None Include="wwwroot\WebCore\dist\img\AdminLTELogo.png" />
+    <None Include="wwwroot\WebCore\dist\img\avatar.png" />
+    <None Include="wwwroot\WebCore\dist\img\avatar04.png" />
+    <None Include="wwwroot\WebCore\dist\img\avatar2.png" />
+    <None Include="wwwroot\WebCore\dist\img\avatar3.png" />
+    <None Include="wwwroot\WebCore\dist\img\avatar5.png" />
+    <None Include="wwwroot\WebCore\dist\img\boxed-bg.jpg" />
+    <None Include="wwwroot\WebCore\dist\img\boxed-bg.png" />
+    <None Include="wwwroot\WebCore\dist\img\credit\american-express.png" />
+    <None Include="wwwroot\WebCore\dist\img\credit\cirrus.png" />
+    <None Include="wwwroot\WebCore\dist\img\credit\mastercard.png" />
+    <None Include="wwwroot\WebCore\dist\img\credit\mestro.png" />
+    <None Include="wwwroot\WebCore\dist\img\credit\paypal.png" />
+    <None Include="wwwroot\WebCore\dist\img\credit\paypal2.png" />
+    <None Include="wwwroot\WebCore\dist\img\credit\visa.png" />
+    <None Include="wwwroot\WebCore\dist\img\default-150x150.png" />
+    <None Include="wwwroot\WebCore\dist\img\icons.png" />
+    <None Include="wwwroot\WebCore\dist\img\photo1.png" />
+    <None Include="wwwroot\WebCore\dist\img\photo2.png" />
+    <None Include="wwwroot\WebCore\dist\img\photo3.jpg" />
+    <None Include="wwwroot\WebCore\dist\img\photo4.jpg" />
+    <None Include="wwwroot\WebCore\dist\img\prod-1.jpg" />
+    <None Include="wwwroot\WebCore\dist\img\prod-2.jpg" />
+    <None Include="wwwroot\WebCore\dist\img\prod-3.jpg" />
+    <None Include="wwwroot\WebCore\dist\img\prod-4.jpg" />
+    <None Include="wwwroot\WebCore\dist\img\prod-5.jpg" />
+    <None Include="wwwroot\WebCore\dist\img\user1-128x128.jpg" />
+    <None Include="wwwroot\WebCore\dist\img\user2-160x160.jpg" />
+    <None Include="wwwroot\WebCore\dist\img\user3-128x128.jpg" />
+    <None Include="wwwroot\WebCore\dist\img\user4-128x128.jpg" />
+    <None Include="wwwroot\WebCore\dist\img\user5-128x128.jpg" />
+    <None Include="wwwroot\WebCore\dist\img\user6-128x128.jpg" />
+    <None Include="wwwroot\WebCore\dist\img\user7-128x128.jpg" />
+    <None Include="wwwroot\WebCore\dist\img\user8-128x128.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.10" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration" Version="6.0.10" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Utils" Version="6.0.10" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+
+</Project>
