@@ -16,6 +16,8 @@ namespace KaracadanWebApp.Controllers
         public async Task<IActionResult> Index()
         {
             var allPersonels = await _context.Personels.ToListAsync();
+            ViewBag.BreadCrumbFirstItem = "Personel";
+            ViewBag.BreadCrumbSecondItem = "Personel Listesi";
             return View(allPersonels);
         }
 
@@ -23,6 +25,8 @@ namespace KaracadanWebApp.Controllers
         public IActionResult Create()
         {
             var person = new Personels();
+            ViewBag.BreadCrumbFirstItem = "Personel";
+            ViewBag.BreadCrumbSecondItem = "Yeni Personel Oluştur";
             return View(person);
         }
 

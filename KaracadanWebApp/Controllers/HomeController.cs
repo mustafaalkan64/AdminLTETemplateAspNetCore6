@@ -22,6 +22,8 @@ namespace KaracadanWebApp.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
+            ViewBag.BreadCrumbFirstItem = "Dashboard";
+            ViewBag.BreadCrumbSecondItem = "";
             return View("Index");
         }
 
