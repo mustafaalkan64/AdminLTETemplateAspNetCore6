@@ -11,3 +11,4 @@ Asp.net Core MVC 6 Pages with Admin LTE Template
 ![alt text](https://github.com/mustafaalkan64/AdminLTETemplateAspNetCore6/blob/master/KaracadanWebApp/Img/Capture2.PNG)
 ![alt text](https://github.com/mustafaalkan64/AdminLTETemplateAspNetCore6/blob/master/KaracadanWebApp/Img/Capture3.PNG)
 ![alt text](https://github.com/mustafaalkan64/AdminLTETemplateAspNetCore6/blob/master/KaracadanWebApp/Img/Capture4.PNG)
+![alt text](https://github.com/mustafaalkan64/AdminLTETemplateAspNetCore6/blob/master/KaracadanWebApp/Img/Capture5.PNG)
